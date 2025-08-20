@@ -1,0 +1,356 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Вкладки */
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 12px 16px;
+    border: none;
+    background: #f8f9fa;
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    background: #e9ecef;
+    color: #333;
+}
+
+.tab-button.active {
+    background: #007bff;
+    color: white;
+}
+
+/* Содержимое вкладок */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Секции */
+.section {
+    background: white;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border: 2px solid #dee2e6;
+}
+
+/* Верхний ряд: блоки рядом */
+.top-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.top-row .section {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+/* Кнопки действий под верхними блоками */
+.top-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 4px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+}
+
+/* Секция выхода */
+.exit-section {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.section h2 {
+    color: #495057;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    font-weight: 600;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 8px;
+}
+
+/* Формы */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.form-group label {
+    min-width: 180px;
+    margin-bottom: 0;
+    font-weight: 500;
+    color: #495057;
+    text-align: right;
+}
+
+.form-group input,
+.form-group select {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+}
+
+/* Кнопки */
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin: 3px;
+}
+
+.btn-small {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.btn-primary {
+    background: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #545b62;
+    transform: translateY(-1px);
+}
+
+.btn-success {
+    background: #28a745;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #1e7e34;
+    transform: translateY(-1px);
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+    transform: translateY(-1px);
+}
+
+/* Список приложений */
+.apps-list {
+    background: #f8f9fa;
+    border: 2px solid #dee2e6;
+    border-radius: 6px;
+    padding: 10px;
+    min-height: 150px;
+    max-height: 175px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.app-item {
+    background: white;
+    padding: 6px 10px;
+    margin: 3px 0;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-item:hover {
+    background: #e9ecef;
+}
+
+.apps-controls {
+    display: flex;
+    gap: 8px;
+}
+
+/* Управление приложением */
+.control-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Консоль */
+.console {
+    background: #2c3e50;
+    color: #2ecc71;
+    font-family: 'Consolas', 'Monaco', monospace;
+    padding: 15px;
+    border-radius: 6px;
+    min-height: 150px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #34495e;
+    margin-bottom: 10px;
+}
+
+.console-controls {
+    display: flex;
+    gap: 8px;
+}
+
+/* Управление сервисом */
+.service-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.service-status {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+}
+
+#serviceStatus {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Кнопки действий */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+/* Предупреждения */
+.warning {
+    color: #f39c12;
+    font-weight: 600;
+    background: #fff3cd;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ffeaa7;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .control-buttons,
+    .service-controls {
+        flex-direction: column;
+    }
+    
+    .actions {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Скроллбар для консоли */
+.console::-webkit-scrollbar {
+    width: 6px;
+}
+
+.console::-webkit-scrollbar-track {
+    background: #34495e;
+    border-radius: 3px;
+}
+
+.console::-webkit-scrollbar-thumb {
+    background: #2ecc71;
+    border-radius: 3px;
+}
+
+.console::-webkit-scrollbar-thumb:hover {
+    background: #27ae60;
+}
