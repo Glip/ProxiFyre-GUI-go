@@ -1,6 +1,7 @@
 # ProxiFyre Configuration Editor
 
 Desktop-приложение для редактирования конфигурации ProxiFyre, построенное с использованием Wails v2 (Go + Web Frontend).
+Для работы требуется **Windows Packet Filter** [скачать](https://github.com/wiresock/ndisapi/releases/latest).
 
 ## Требования
 
@@ -8,6 +9,7 @@ Desktop-приложение для редактирования конфигу�
 - **Node.js 16+** - [скачать](https://nodejs.org/)
 - **Wails CLI v2** - установить командой: `go install github.com/wailsapp/wails/v2/cmd/wails@latest`
 - **Git** - для клонирования репозитория
+
 
 ## Установка
 
